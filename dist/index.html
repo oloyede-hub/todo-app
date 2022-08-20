@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <button class="menu" data-toggle-navbar-btn>
+                <ion-icon class="open" name="menu-outline"></ion-icon>
+                <ion-icon class="close" name="close-outline"></ion-icon>
+            </button>
+            <div style="display: flex; gap: 5px ">
+                <ion-icon name="terminal-outline"></ion-icon>
+                Todo
+            </div>
+        </div>
+        <div class="add">
+            <ion-icon name="add-outline"></ion-icon>
+        </div>
+    </header>
+
+    <main>
+        <!-- sidebar -->
+        <nav class="sidebar-container" data-navbar>
+            <div class="predifined-project">
+                <button class="button-option" id="button-option-inbox">
+                    <ion-icon class="button-option-icon" name="chatbox-outline"></ion-icon>
+                    Inbox
+                </button>
+                <button class="button-option" id="button-option-today">
+                    <ion-icon class="button-option-icon" name="bag-check-outline"></ion-icon>
+                    Today
+                </button>
+                <button class="button-option" id="button-option-thisweek">
+                    <ion-icon class="button-option-icon" name="calendar-outline"></ion-icon>
+                    This Week
+                </button>
+
+            </div>
+            <h3>Projects</h3>
+            <button class="add-project">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </button>
+            <div class="add-project-preview"></div>
+        </nav>
+        <div class="content" data-content>
+            <h1 class="content-project-header">Inbox</h1>
+            <form class="add-todo-form">
+                <input type="text" placeholder="Add new todo...">
+                <div class="form-button">
+                    <button> Add</button>
+                    <button>Cancel</button>
+                </div>
+            </form>
+            <h3>Your Todo List...</h3>
+            <div class="todo-list" data-todo-list>
+                <div class="todo">
+                    <div class="task"> 
+                        <input type="checkbox" name="" id="">
+                        <p> Go to market</p>
+                    </div>
+                    <p>12 /12 /2022</p>
+                    <div class="attribution">
+                        <ion-icon icon="ellipsis-vertical-circle-outline" aria-modal="false"></ion-icon>
+                        <ion-icon name="flag-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="todo">
+                    <div class="task"> 
+                        <input type="checkbox" name="" id="">
+                        <p> Go to market</p>
+                    </div>
+                    <p>12 /12 /2022</p>
+                    <div class="attribution">
+                        <ion-icon icon="ellipsis-vertical-circle-outline" aria-modal="false"></ion-icon>
+                        <ion-icon name="flag-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content of each project options -->
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

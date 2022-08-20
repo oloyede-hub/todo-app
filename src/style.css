@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+}
+ion-icon {
+    font-size: 32px;
+    color: white;
+    --ionicon-stroke-width: 26px;
+    font-weight: 800;
+}
+
+ion-icon,
+a,
+span,
+button {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgb(153, 5, 5);
+    padding-block: 15px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    gap: 50px;
+
+}
+
+.menu {
+    background-color: transparent;
+    outline: none;
+    color: white;
+    border: none;
+}
+
+.menu.active .open,
+.menu .close {
+    display: none;
+}
+.menu .open,
+.menu.active .close {
+    display: block;
+}
+
+
+
+/* SIDEBAR*/
+
+main {
+    display: flex;
+    height: calc(100vh - 66px);
+}
+
+
+.sidebar-container {
+    background-color: rgba(225, 225, 225, 0.755);
+    display: none;
+    /* transition: width 1s ease-in-out 300ms; */
+    padding-block: 45px;
+    padding-inline: 20px;
+    min-width: 250px;
+}
+
+.sidebar-container.active {
+    width: 300px;
+    min-width: 250px;
+    display: block;
+}
+
+.sidebar-container .button-option {
+    outline: none;
+    background-color: rgba(79, 25, 25, 0.387);
+    border: none;
+}
+
+
+.sidebar-container .predifined-project {
+    
+}
+
+.sidebar-container .predifined-project .button-option {
+    width: 100%;
+    margin-block: 20px;
+    padding-block: 5px;
+    padding-inline: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+
+
+.sidebar-container .predifined-project .button-option:is(:hover, :focus) {
+    background-color: brown;
+    color: white;
+}
+
+
+.sidebar-container h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding-top: 10px;
+}
+
+
+
+.add-project {
+    background-color: transparent;
+    outline: none;
+    color: #333;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-block: 10px ;
+    margin-block: 5px;
+    border-radius: 50%;
+}
+
+.add-project ion-icon{
+    color: #333;
+    font-size: 32px;
+}
+
+.add-project ion-icon:hover {
+    color: rgb(172, 102, 102);
+}
+
+/* CONTENT RIGHT */
+.content {
+    padding-block: 10px;
+    padding-inline: 10px ;
+    width: 100%;
+    padding-inline-start: 100px;
+}
+
+.content-project-header {
+    padding-block: 20px;
+    text-decoration: underline;
+
+}
+
+
+.todo-list {
+    padding-block: 20px;
+}
+
+.content h3 {
+    padding-block: 10px;
+}
+
+
+.todo-list ion-icon {
+    font-size: 24px;
+    color: #333;
+    /* pointer-events: none; */
+}
+
+.todo-list ion-icon:hover {
+    color: rgb(172, 102, 102);
+    --ionicon-stroke-width: 32px;
+}
+
+.todo {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(139, 135, 135);
+    padding-block: 10px;
+    padding-inline: 10px;
+    color: white;
+    margin-block: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo ion-icon{
+    color: white;
+}
+
+.todo .attribution {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.add-todo-form {
+    width: 70%;
+}
+
+.add-todo-form input {
+    padding-inline-start: 20px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-button button:first-child {
+    background-color: rgb(172, 202, 126);
+}
+.form-button button:last-child {
+    background-color: rgb(207, 131, 131);
+}
+.form-button button:first-child:hover {
+    background-color: rgba(172, 202, 126, 0.467);
+}
+.form-button button:last-child:hover {
+    background-color: rgba(207, 131, 131, 0.348);
+}
+
+.form-button button {
+    width: 200px;
+    text-transform: uppercase;
+    font-size: 12;
+    padding-block: 10px ;
+    padding-inline: 5px ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white
+}
+.add-todo-form input, .form-button {
+    width: 100%;
+    padding-block: 10px ;
+}
+
+
+
